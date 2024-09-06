@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster Management Resource</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Disaster Management Resource</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#risk">Risk Mitigation</a></li>
+                <li><a href="#planning">Planning</a></li>
+                <li><a href="#during">During a Disaster</a></li>
+                <li><a href="#education">Educational Resources</a></li>
+                <li><a href="#contact">Contact & Support</a></li>
+            </ul>
+            <ul class="nav-right">
+                <li class="login-register"><a href="http://127.0.0.1:5501/login/login.html">Login</a></li>
+                <li class="login-register"><a href="http://127.0.0.1:5501/login/login.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home">
+        <div class="hero">
+            <img src="logo2.png" alt="Disaster Management">
+            <img src="logo.png" alt="Disaster Management">
+            <img src="logo2.png" alt="Disaster Management">
+            <div class="hero-text">
+                <div class="hero-box">
+                    <h2>Welcome to SAFEZONE !!</h2>
+                    <p>Learn how to act & save your life during disasters.</p>
+                </div>
+                <div class="hero-box">
+                    <h2>Welcome to SAFEZONE !!</h2>
+                    <p>Learn how to prepare for and respond to disasters effectively.</p>
+                </div>
+            </div>
+        </div>
+        <div id="news-alerts">
+            <h3></h3>
+            <div id="alerts"></div>
+        </div>
+    </section>
+    
+    <!-- Risk Mitigation Section -->
+    <section id="risk">
+        <h2>Risk Mitigation</h2>
+        <div class="content">
+            <div class="card">
+                <img src="weatherforecast.png" alt="Risk Assessment">
+                <h3>Weather Forecast</h3>
+                <p>Shows real time weather forecast in your location</p>
+                <p><a href="http://127.0.0.1:5501/weather/login.html" target="_blank">Click Here</a></p>
+            </div>
+            <div class="card">
+                <img src="safety.png" alt="Safety Measures">
+                <h3>Safety Measures</h3>
+                <p>Guidelines for protecting homes, businesses, and communities.</p>
+                <p><a href="https://asdma.assam.gov.in/information-services/dos-donts-during-disaster#:~:text=DROP%2C%20COVER%20%26%20HOLD%20Stay%20away,and%20move%20to%20open%20fields." target="_blank">Click Here</a></p>
+            </div>
+            <div class="card">
+                <img src="emergency.png" alt="Emergency Kits">
+                <h3>Emergency Kits</h3>
+                <p>Recommendations on what to include in your emergency kit.</p>
+                <p><a href="https://www.redcross.org/get-help/how-to-prepare-for-emergencies/survival-kit-supplies.html" target="_blank">Click Here</a></p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Planning Section -->
+    <section id="planning">
+        <h2>Planning</h2>
+        <div class="content">
+            <div class="card">
+                <img src="emergency.png" alt="Emergency Plans">
+                <h3>Emergency Plans</h3>
+                <p>Templates and guides for creating family, business, and community emergency plans.</p>
+                <p><a href="https://www.redcross.org/get-help/how-to-prepare-for-emergencies/make-a-plan.html#:~:text=Practice%20evacuating%20your%20home%20twice,GPS%20units%20and%20on%20paper." target="_blank">Click Here</a></p>
+            </div>
+            <div class="card">
+                <img src="map.png" alt="Evacuation Routes">
+                <h3>Disaster Affected Region</h3>
+                <p>Maps and tips for planning evacuation routes and meeting points.</p>
+                <p><a href="https://riseq.seismo.gov.in/riseq/earthquake" target="_blank">View Map</a></p>
+            </div>
+            <div class="card">
+                <img src="map55.png" alt="Community Planning">
+                <h3>Nearby Safe Zones/ Shelters </h3>
+                <p>Shows nearby shelters and safe zones around you during any disaster</p>
+                <p><a href="https://www.google.com/maps/search/nearby+shelters+showing+in+map/@28.4900947,77.1108926,10z?entry=ttu&g_ep=EgoyMDI0MDkwMi4xIKXMDSoASAFQAw%3D%3D" target="_blank">View Map</a></p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- During a Disaster Section -->
+    <section id="during">
+        <h2>During a Disaster</h2>
+        <div class="content">
+            <div class="card">
+                <img src="sos.png" alt="Real-Time Updates">
+                <h3>Emergency SOS System</h3>
+                <p>Sends real time emergency message to nearby rescuers</p>
+                <button class="sos-button" onclick="sendEmergencyMessage()">Send SOS</button>
+            </div>
+            <div class="card">
+                <img src="tips.png" alt="Survival Tips">
+                <h3>Survival Tips</h3>
+                <p>Practical advice for staying safe during different types of disasters.</p>
+                <p><a href="https://nsdma.nagaland.gov.in/disaster-safety-tips" target="_blank">Click Here</a></p>
+                
+            </div>
+            <div class="card">
+                <img src="communication.png" alt="Communication Tools">
+                <h3>Communication Tools</h3>
+                <p>Guidelines for maintaining communication with family and emergency services.</p>
+                <p><a href="https://llu.edu/campus-spiritual-life/emergency/disaster-communication#:~:text=Social%20Media%3A%20Social%20media%20sites,a%20feature%20called%20Safety%20Check." target="_blank">Click Here</a></p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Educational Resources Section -->
+    <section id="education">
+        <h2>Educational Resources</h2>
+        <div class="content">
+            <div class="card">
+                <img src="training.png" alt="Training Programs">
+                <h3>Training Programs</h3>
+                <p>Links to online courses or workshops on disaster preparedness and response.</p>
+                <p><a href="https://www.undrr.org/our-work/training" target="_blank">Click Here</a></p>
+            </div>
+            <div class="card">
+                <img src="simulation.png" alt="Interactive Simulations">
+                <h3>Interactive Simulations</h3>
+                <p>Games or simulations that help users practice their disaster response skills.</p>
+                <p><a href="https://ithrivegames.org/disaster-mind/" target="_blank">Click Here</a></p>
+            </div>
+            <div class="card">
+                <img src="film.png" alt="Infographics & Videos">
+                <h3>Infographics & Videos</h3>
+                <p>Visual content to explain key concepts and procedures.</p>
+                <p><a href="https://youtu.be/OCjl6tp8dnw?si=rrneviaWgaRmpwrz" target="_blank">Click Here</a></p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact & Support Section -->
+    <section id="contact">
+        <h2>Contact & Support</h2>
+        <div class="content">
+            <div class="card">
+                <img src="emergency.png" alt="Emergency Contacts">
+                <h3>Emergency Contacts</h3>
+                <p>Quick access to emergency services and local disaster response teams.</p>
+                <p><a href="https://indianhelpline.com/" target="_blank">Click Here</a></p>
+            </div>
+            <div class="card">
+                <img src="ai.png" alt="Help Desk">
+                <h3>AI Chat Box</h3>
+                <p>A section for users to ask question and get live supports and tips from AI.</p>
+                <p><a href="https://cdn.botpress.cloud/webchat/v2.1/shareable.html?botId=283beb03-f639-4456-9c1a-a8cd74df4bec" target="_blank">Click Here To Chat</a></p>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Disaster Management Resource</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

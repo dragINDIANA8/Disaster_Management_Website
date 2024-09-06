@@ -1,0 +1,346 @@
+/* General Styles */
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #eaeaea; /* Soft gray background for a clean, modern look */
+    color: #333; /* Default dark text color for readability */
+}
+
+header {
+    background-color: #1a237e; /* Dark navy blue for a professional feel */
+    color: #fff;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+header h1 {
+    margin: 0;
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin : 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+nav ul li a:hover {
+    background-color: #3949ab; /* Slightly lighter shade of blue for hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    overflow: hidden;
+    padding: 20px;
+    background-image: url('your-hero-background.png'); /* Add your transparent background image */
+    background-size: cover;
+    background-blur: 5px; /* Optional: add blur effect if needed */
+}
+
+.hero img {
+    width: 20%;
+    height: 20%;
+    object-fit: cover;
+    filter: brightness(80%);
+    transition: filter 0.5s;
+    margin-right: 10px; /* Space between images */
+}
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column; /* Stack boxes vertically */
+    gap: 20px; /* Space between boxes */
+    align-items: center; /* Center boxes horizontally within the container */
+    max-width: 60%; /* Adjust width if needed */
+}
+
+.hero-box {
+    background: rgba(26, 35, 126, 0.8); /* Navy overlay with transparency */
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%; /* Ensure boxes take full width of .hero-text */
+    text-align: center; /* Center text within each box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional shadow for better visibility */
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero img:hover {
+    filter: brightness(80%);
+}
+
+/* Section Styles */
+section {
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Dark Blue Background for Specific Sections */
+section#risk,
+section#planning,
+section#during,
+section#recovery,
+section#education,
+section#community,
+section#contact {
+    background-color: #1a237e; /* Dark navy blue background for specified sections */
+    color: #fff; /* White text color for section headings */
+}
+
+/* Subsection Styles */
+section#risk .card,
+section#planning .card,
+section#during .card,
+section#recovery .card,
+section#education .card,
+section#community .card,
+section#contact .card {
+    color: #000; /* Black text color for content within the cards */
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 15%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Softer shadow for hover */
+}
+
+.card img:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #1a237e;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul li {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+    
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Animation Styles */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* Add this to your existing CSS file */
+html {
+    scroll-behavior: smooth;
+}
+/* Updated Header Styles */
+header {
+    background-color: #1a237e;
+    color: #fff;
+    padding: 20px;
+    text-align: center; /* Center-align the content in the header */
+    position: relative; /* Position relative for better control */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px; /* Adjust the font size as needed */
+    line-height: 1.5;
+}
+
+nav {
+    margin-top: 5px; /* Adds space between title and navigation menu */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Center the navigation menu */
+    gap: 20px; /* Adds spacing between the navigation links */
+}
+/* Fixed Navigation Styles */
+header {
+    background-color: #525ede;
+    color: #fff;
+    padding: 10px 0; /* Adjust padding to fit better in the fixed position */
+    text-align: center;
+    position: fixed; /* Fixes the header to the top */
+    top: 0; /* Aligns to the top of the page */
+    width: 100%; /* Ensures the header spans the full width */
+    z-index: 1000; /* Keeps the header on top of other content */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adds spacing between the navigation links */
+}
+
+body {
+    margin: 0;
+    padding-top: 80px; /* Adds padding to prevent content from being hidden under the fixed header */
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Style Adjustments for Scrolling Animation */
+section {
+    padding: 40px 20px; /* Adds more space for sections to look more balanced with fixed nav */
+    transition: opacity 0.6s ease-in-out; /* Animation for smooth appearance */
+    opacity: 1; /* Default opacity */
+}
+
+section.hidden {
+    opacity: 0; /* Hides sections on load */
+}
+/* Additional Padding for Sections */
+section {
+    padding: 50px 30px 100px; /* Add top padding to ensure full visibility under the fixed header */
+    transition: opacity 0.6s ease-in-out;
+    opacity: 1;
+}
+
+section.hidden {
+    opacity: 0;
+}
+/* Navigation Menu Box Styles */
+nav ul {
+    list-style: none;
+    padding: 4px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Spacing between menu items */
+}
+
+nav ul li {
+    position: relative; /* Position relative to use for the box effect */
+}
+
+nav ul li a {
+    display: inline-block; /* Allows padding and border to be applied correctly */
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px; /* Padding for the box effect */
+    border: 2px solid transparent; /* Border to create the box effect */
+    border-radius: 5px; /* Rounded corners */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    background-color: #1a237e; /* Background color of the box */
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    border-color: #ff9800; /* Box border color on hover or active */
+    background-color: #444; /* Slightly lighter background color on hover */
+    color: #ff9800; /* Change text color on hover or active */
+}
+
+/* Optional: Adding a shadow effect for better visibility */
+nav ul li a:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds shadow on hover for 3D effect */
+}
+.sos-button {
+    background-color: #ff4c4c;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .sos-button:hover {
+    background-color: #cc0000;
+  }
+  .auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+nav ul.nav-right li a {
+    font-weight: bold;
+    color: #007BFF;
+}
+
+/* Hover effect for Login and Register links */
+nav ul.nav-right li a:hover {
+    background-color: #0056b3; /* Darker shade for hover effect */
+    color: white;
+}
+.nav-right li {
+    margin-left: 15px; /* Space between login and register buttons */
+}
