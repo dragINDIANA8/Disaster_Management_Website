@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>India Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <style>
+    /* Add some basic styling to the map and body */
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    #map {
+      width: 100vw;
+      height: 100vh;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <script>
+    // Create a new Leaflet map
+    var map = L.map('map').setView([21.1458, 82.6726], 4); // Adjusted center coordinates and zoom level
+
+    // Set the map bounds to India's boundaries
+    var indiaBounds = [[8.0667, 68.1324], [37.0844, 97.3958]];
+    map.setMaxBounds(indiaBounds);
+    map.fitBounds(indiaBounds);
+
+    // Add a tile layer that only shows India
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>',
+      minZoom: 4,
+      maxZoom: 18,
+      bounds: indiaBounds
+    }).addTo(map);
+
+    // Add a GeoJSON layer with state boundaries
+    var states = {
+      "type": "FeatureCollection",
+      "features": [
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Jammu and Kashmir",
+            "height": 8126
+          },
+          "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [74.2444, 32.5488],
+                [78.0244, 32.8639],
+                [77.8304, 34.6181],
+                [75.7244, 34.5659],
+                [74.2444, 32.5488]
+              ]
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Himachal Pradesh",
+            "height": 6816
+          },
+          "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [76.7944, 30.4511],
+                [78.6444, 31.6339],
+                [78.2444, 32.5488],
+                [76.7944, 30.4511]
+              ]
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Uttarakhand",
+            "height": 7816
+          },
+          "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [78.0244, 29.3343],
+                [80.0244, 30.5488],
+                [79.8304, 31.5659],
+                [78.0244, 29.3343]
+              ]
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "kerala",
+            "height": 2695
+          },
+          "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [76.2711, 8.4833],
+                [76.5711, 9.4833],
+                [77.2711, 10.4833],
+                [77.5711, 11.4833],
+                [76.2711, 8.4833]
+              ]
+              ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "odisha",
+            "height": 1516
+          },
+          "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+              [81.2711, 18.4833],
+              [82.2711, 19.4833] ,
+              [83.2711, 20.4833],
+              [84.2711, 21.4833],
+              [81.2711, 18.4833]
+              ]
+              ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Andhra Pradesh",
+            "height": 1680
+          },
+          "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+              [78.2711, 17.4833],
+              [79.2711, 18.4833],
+              [80.2711, 19.4833],
+              [81.2711, 20.4833],
+              [78.2711, 17.4833]
+              ]
+              ]
+          }
+        }, 
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "UTTAR PRADESH",
+            "height": 853
+          },
+          "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+              [78.0422, 27.1753],
+[78.0422, 28.1753],
+[79.0422, 28.1753],
+[79.0422, 27.1753],
+[78.0422, 27.1753]
+              ]
+              ]
+          }
+        }, 
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Assam",
+            "height": 1962
+          },
+          "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+              [92.2711, 25.4833],
+[93.2711, 26.4833],
+[94.2711, 27.4833],
+[95.2711, 28.4833],
+[92.2711, 25.4833]
+              ]
+              ]
+          }
+        }, 
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Bihar",
+            "height": 881
+          },
+          "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+              [85.2711, 25.4833],
+[86.2711, 26.4833],
+[87.2711, 27.4833],
+[88.2711, 28.4833],
+[85.2711, 25.4833]
+              ]
+              ]
+          }
+        }, 
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Karnataka",
+            "height": 1925
+          },
+          "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+              [75.2711, 13.4833],
+[76.2711, 14.4833],
+[77.2711, 15.4833],
+[78.2711, 16.4833],
+[75.2711, 13.4833]
+              ]
+              ]
+          }
+        }, 
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Gujarat",
+            "height": 1117
+          },
+          "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+              [70.2711, 20.4833],
+[71.2711, 21.4833],
+[72.2711, 22.4833],
+[73.2711, 23.4833],
+[70.2711, 20.4833]
+              ]
+              ]
+          }
+        }, 
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Maharashtra",
+            "height": 1646
+          },
+          "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+              [73.2711, 18.4833],
+[74.2711, 19.4833],
+[75.2711, 20.4833],
+[76.2711, 21.4833],
+[73.2711, 18.4833]
+              ]
+          ]
+          }
+        }, 
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Tamil Nadu",
+            "height": 2637
+          },
+          "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+              [76.2711, 8.4833],
+[77.2711, 9.4833],
+[78.2711, 10.4833],
+[79.2711, 11.4833],
+[76.2711, 8.4833]
+              ]
+          ]
+          }
+        }, 
+      ]
+    };
+
+    L.geoJSON(states, {
+      style: function(feature) {
+        return {
+          weight: 2,
+          opacity: 1,
+          color: 'black',
+          dashArray: '3',
+          fillOpacity: 0.7
+        };
+      },
+      onEachFeature: function(feature, layer) {
+        layer.bindTooltip(feature.properties.name.toUpperCase(), {
+          permanent: true,
+          direction: 'center',
+          className: 'state-tooltip'
+        });
+      }
+    }).addTo(map);
+
+    // Add a CSS rule to style the tooltips
+    var style = document.createElement('style');
+    style.innerHTML = '.state-tooltip { color: red; font-weight: bold; }';
+    document.head.appendChild(style);
+  </script>
+</body>
+</html>
